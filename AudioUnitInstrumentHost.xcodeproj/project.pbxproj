@@ -8,10 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		442851C51FD9A2900065951C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442851C41FD9A2900065951C /* AppDelegate.swift */; };
-		442851C71FD9A2900065951C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442851C61FD9A2900065951C /* ViewController.swift */; };
 		442851C91FD9A2900065951C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 442851C81FD9A2900065951C /* Assets.xcassets */; };
 		442851CC1FD9A2900065951C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442851CA1FD9A2900065951C /* Main.storyboard */; };
 		442851D81FD9A2900065951C /* AudioUnitInstrumentHostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442851D71FD9A2900065951C /* AudioUnitInstrumentHostTests.swift */; };
+		442851E51FD9A3440065951C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442851E41FD9A3440065951C /* MainViewController.swift */; };
+		442851E71FD9A3920065951C /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442851E61FD9A3920065951C /* AudioService.swift */; };
+		442851EC1FD9A3EE0065951C /* AUv2InstrumentHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442851E91FD9A3EE0065951C /* AUv2InstrumentHost.swift */; };
+		442851ED1FD9A3EE0065951C /* AUv3InstrumentHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442851EA1FD9A3EE0065951C /* AUv3InstrumentHost.swift */; };
+		442851EE1FD9A3EE0065951C /* InstrumentHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442851EB1FD9A3EE0065951C /* InstrumentHost.swift */; };
+		442851F71FD9A49B0065951C /* AudioUnitGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442851F21FD9A49B0065951C /* AudioUnitGraph.swift */; };
+		442851F81FD9A49B0065951C /* AudioUnitInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442851F31FD9A49B0065951C /* AudioUnitInstance.swift */; };
+		442851F91FD9A49B0065951C /* NSError+OSStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442851F41FD9A49B0065951C /* NSError+OSStatus.swift */; };
+		442851FA1FD9A49B0065951C /* AudioToolboxHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 442851F61FD9A49B0065951C /* AudioToolboxHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +35,6 @@
 /* Begin PBXFileReference section */
 		442851C11FD9A2900065951C /* AudioUnitInstrumentHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioUnitInstrumentHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		442851C41FD9A2900065951C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		442851C61FD9A2900065951C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		442851C81FD9A2900065951C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		442851CB1FD9A2900065951C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		442851CD1FD9A2900065951C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +42,17 @@
 		442851D31FD9A2900065951C /* AudioUnitInstrumentHostTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioUnitInstrumentHostTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		442851D71FD9A2900065951C /* AudioUnitInstrumentHostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitInstrumentHostTests.swift; sourceTree = "<group>"; };
 		442851D91FD9A2900065951C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		442851E41FD9A3440065951C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		442851E61FD9A3920065951C /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
+		442851E91FD9A3EE0065951C /* AUv2InstrumentHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AUv2InstrumentHost.swift; sourceTree = "<group>"; };
+		442851EA1FD9A3EE0065951C /* AUv3InstrumentHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AUv3InstrumentHost.swift; sourceTree = "<group>"; };
+		442851EB1FD9A3EE0065951C /* InstrumentHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentHost.swift; sourceTree = "<group>"; };
+		442851F11FD9A49A0065951C /* AudioUnitInstrumentHost-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioUnitInstrumentHost-Bridging-Header.h"; sourceTree = "<group>"; };
+		442851F21FD9A49B0065951C /* AudioUnitGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioUnitGraph.swift; sourceTree = "<group>"; };
+		442851F31FD9A49B0065951C /* AudioUnitInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioUnitInstance.swift; sourceTree = "<group>"; };
+		442851F41FD9A49B0065951C /* NSError+OSStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+OSStatus.swift"; sourceTree = "<group>"; };
+		442851F51FD9A49B0065951C /* AudioToolboxHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioToolboxHelpers.h; sourceTree = "<group>"; };
+		442851F61FD9A49B0065951C /* AudioToolboxHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioToolboxHelpers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +94,10 @@
 		442851C31FD9A2900065951C /* AudioUnitInstrumentHost */ = {
 			isa = PBXGroup;
 			children = (
+				442851EF1FD9A43E0065951C /* Utility */,
+				442851E31FD9A2E80065951C /* Audio */,
+				442851E21FD9A2D20065951C /* UI */,
 				442851C41FD9A2900065951C /* AppDelegate.swift */,
-				442851C61FD9A2900065951C /* ViewController.swift */,
 				442851C81FD9A2900065951C /* Assets.xcassets */,
 				442851CA1FD9A2900065951C /* Main.storyboard */,
 				442851CD1FD9A2900065951C /* Info.plist */,
@@ -93,6 +113,54 @@
 				442851D91FD9A2900065951C /* Info.plist */,
 			);
 			path = AudioUnitInstrumentHostTests;
+			sourceTree = "<group>";
+		};
+		442851E21FD9A2D20065951C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				442851E41FD9A3440065951C /* MainViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		442851E31FD9A2E80065951C /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				442851E81FD9A3B60065951C /* Host */,
+				442851E61FD9A3920065951C /* AudioService.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		442851E81FD9A3B60065951C /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				442851EB1FD9A3EE0065951C /* InstrumentHost.swift */,
+				442851E91FD9A3EE0065951C /* AUv2InstrumentHost.swift */,
+				442851EA1FD9A3EE0065951C /* AUv3InstrumentHost.swift */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
+		442851EF1FD9A43E0065951C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				442851F01FD9A4480065951C /* AUv2 */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		442851F01FD9A4480065951C /* AUv2 */ = {
+			isa = PBXGroup;
+			children = (
+				442851F51FD9A49B0065951C /* AudioToolboxHelpers.h */,
+				442851F61FD9A49B0065951C /* AudioToolboxHelpers.m */,
+				442851F21FD9A49B0065951C /* AudioUnitGraph.swift */,
+				442851F31FD9A49B0065951C /* AudioUnitInstance.swift */,
+				442851F41FD9A49B0065951C /* NSError+OSStatus.swift */,
+				442851F11FD9A49A0065951C /* AudioUnitInstrumentHost-Bridging-Header.h */,
+			);
+			path = AUv2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +213,13 @@
 				TargetAttributes = {
 					442851C01FD9A2900065951C = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					442851D21FD9A2900065951C = {
 						CreatedOnToolsVersion = 9.1;
@@ -197,7 +271,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				442851C71FD9A2900065951C /* ViewController.swift in Sources */,
+				442851E71FD9A3920065951C /* AudioService.swift in Sources */,
+				442851EE1FD9A3EE0065951C /* InstrumentHost.swift in Sources */,
+				442851E51FD9A3440065951C /* MainViewController.swift in Sources */,
+				442851F91FD9A49B0065951C /* NSError+OSStatus.swift in Sources */,
+				442851F71FD9A49B0065951C /* AudioUnitGraph.swift in Sources */,
+				442851EC1FD9A3EE0065951C /* AUv2InstrumentHost.swift in Sources */,
+				442851ED1FD9A3EE0065951C /* AUv3InstrumentHost.swift in Sources */,
+				442851F81FD9A49B0065951C /* AudioUnitInstance.swift in Sources */,
+				442851FA1FD9A49B0065951C /* AudioToolboxHelpers.m in Sources */,
 				442851C51FD9A2900065951C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = AudioUnitInstrumentHost/AudioUnitInstrumentHost.entitlements;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RGZSVAB4M3;
@@ -350,6 +432,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = name.acb.AudioUnitInstrumentHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioUnitInstrumentHost/Utility/AUv2/AudioUnitInstrumentHost-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -358,7 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = AudioUnitInstrumentHost/AudioUnitInstrumentHost.entitlements;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RGZSVAB4M3;
@@ -366,6 +450,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = name.acb.AudioUnitInstrumentHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioUnitInstrumentHost/Utility/AUv2/AudioUnitInstrumentHost-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

@@ -25,20 +25,10 @@ class AUv2InstrumentHost {
         } catch {
             fatalError("Failed to initialise graph: \(error)")
         }
-        
     }
-
 }
 
-// TODO: refactor these somewhere nicer
-//fileprivate func MusicDeviceComponent(_ unit: MusicDeviceComponent, sendMIDIEvent statusByte: UInt8, _ data1: UInt8, _ data2: UInt8, atSampleOffset offset: UInt32) throws {
-//    let status = MusicDeviceMIDIEvent(unit, UInt32(statusByte), UInt32(data1), UInt32(data2), offset)
-//    if status != noErr { throw NSError(osstatus:status) }
-//}
-
-
 extension AUv2InstrumentHost: InstrumentHost {
-    
     
     var auAudioUnit: AUAudioUnit? { return nil }
     
@@ -65,7 +55,6 @@ extension AUv2InstrumentHost: InstrumentHost {
                 completion(true)
             }
         } catch {
-//            let err = NSError(domain: NSOSStatusErrorDomain, code: Int(error as! Int32), userInfo: nil)
             print("Failed to load synth node: \(error)")
             completion(false)
         }
@@ -94,7 +83,5 @@ extension AUv2InstrumentHost: InstrumentHost {
     func requestInstrumentInterface(_ completion: @escaping (InterfaceInstance?)->()) {
         let view = loadViewForAudioUnit(self.synthUnit!.auRef, CGSize(width: 0, height: 0))
         completion(view.map(InterfaceInstance.view))
-
     }
-    
 }

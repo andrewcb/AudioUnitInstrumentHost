@@ -15,7 +15,7 @@ class MainViewController: NSViewController {
     @IBOutlet weak var instrumentsOutlineView: NSOutlineView!
     @IBOutlet weak var instrumentNameLabel: NSTextField!
     
-    @IBOutlet var playbackEngine: AudioService!
+    @IBOutlet var audioService: AudioService!
     
     private let segueOpenInstrument = NSStoryboardSegue.Identifier("OpenInstrumentView")
     
@@ -65,22 +65,17 @@ class MainViewController: NSViewController {
     private func reloadInstruments() {
         DispatchQueue.global(qos: .utility).async { [weak self] in
             guard let s = self else { return }
-            s.availableInstruments = s.playbackEngine.getListOfInstruments()
+            s.availableInstruments = s.audioService.getListOfInstruments()
         }
     }
-    
-    @IBAction func playButtonPressed(_ sender: Any) {
-        self.playbackEngine.bang()
-    }
-    
-    
+        
     fileprivate func selectInstrument(_ inst: AVAudioUnitComponent) {
-        self.playbackEngine.loadInstrument(fromDescription: inst.audioComponentDescription) { [weak self] (successful) in
+        self.audioService.loadInstrument(fromDescription: inst.audioComponentDescription) { [weak self] (successful) in
             
             DispatchQueue.main.async {
                 self?.instrumentNameLabel?.stringValue = inst.name
                 self?.instrumentWindowController?.close()
-                self?.playbackEngine.requestInstrumentInterface{ (maybeInterface) in
+                self?.audioService.requestInstrumentInterface{ (maybeInterface) in
                     guard let interface = maybeInterface else { return }
                     self?.instrumentInterfaceInstance = interface
                     DispatchQueue.main.async {
@@ -119,7 +114,7 @@ class MainViewController: NSViewController {
         case .note(let offset):
             let note = self.octaveOffset+offset
             if note < 128 {
-                self.playbackEngine.noteOn(note, withVelocity: min(127,self.velocity))
+                self.audioService.noteOn(note, withVelocity: min(127,self.velocity))
             }
         case .octaveDown: self.octaveOffset = max(self.octaveOffset-12, 0)
         case .octaveUp:   self.octaveOffset = min(self.octaveOffset+12, 120)
@@ -133,7 +128,7 @@ class MainViewController: NSViewController {
         if case .note(let offset) = action {
             let note = self.octaveOffset+offset
             if note < 128 {
-                self.playbackEngine.noteOff(note)
+                self.audioService.noteOff(note)
             }
         }
     }

@@ -890,9 +890,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="audioService" destination="agJ-UK-cHe" id="1dh-sE-m0k"/>
                         <outlet property="instrumentNameLabel" destination="dub-Bv-npQ" id="33p-tQ-UIa"/>
                         <outlet property="instrumentsOutlineView" destination="E4O-YB-BO6" id="vrp-D3-Xgz"/>
-                        <outlet property="playbackEngine" destination="agJ-UK-cHe" id="1dh-sE-m0k"/>
                         <segue destination="k7X-Im-m4N" kind="show" identifier="OpenInstrumentView" id="0pJ-Ji-HB0"/>
                     </connections>
                 </viewController>

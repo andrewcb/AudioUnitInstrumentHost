@@ -41,14 +41,6 @@ class AudioService: NSObject {
     
     func noteOff(_ note: UInt8) {
         host.noteOff(note)
-    }
-    
-    // make some kind of racket
-    func bang() {
-        host.noteOn(60, withVelocity: 100)
-        DispatchQueue.global().asyncAfter(deadline: .now()+0.2) { [weak self] in
-            self?.host.noteOff(60)
-        }
-    }
+    }    
 }
 
